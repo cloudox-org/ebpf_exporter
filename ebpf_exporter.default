@@ -1,0 +1,1 @@
+EBPF_EXPORTER_OPTS="--config.file=/etc/prometheus/ebpf_exporter.yml"

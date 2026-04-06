@@ -1,0 +1,18 @@
+# -*- mode: conf -*-
+
+[Unit]
+Description=Prometheus exporter for custom eBPF metrics
+Documentation=https://github.com/cloudflare/ebpf_exporter
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/ebpf_exporter
+User=prometheus
+ExecStart=/usr/bin/ebpf_exporter $EBPF_EXPORTER_OPTS
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5s
+
+
+[Install]
+WantedBy=multi-user.target
