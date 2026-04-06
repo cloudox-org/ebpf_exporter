@@ -12,7 +12,7 @@ URL:     https://github.com/cloudflare/ebpf_exporter
 Source0: https://github.com/cloudflare/ebpf_exporter/releases/download/v%{version}/%{name}.x86_64
 Source1: %{name}.unit
 Source2: %{name}.default
-Source3: https://raw.githubusercontent.com/cloudflare/%{name}/v%{version}/examples/bio.yaml
+Source3: https://raw.githubusercontent.com/cloudflare/%{name}/v%{version}/examples/biolatency.yaml
 
 %{?systemd_requires}
 Requires(pre): shadow-utils
